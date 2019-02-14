@@ -1,22 +1,12 @@
-<p id="notice"><%= notice %></p>
-<% if user_signed_in? %>
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%=image_tag @article.image.url ,:style =>'width:200px; height:200px' %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @article.description.html_safe %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
-<% else %>
-  <p>You must be logged in first.</p>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card shadow rounded p-3 col-md-9">
+      <p id="notice"><%= notice %></p>
+      <h1 class="text-center"><%= @article.title %></h1>
+      <%=image_tag @article.image.url, class: "card-img-top" %>
+      <div class="card-body">
+        <%= @article.description.html_safe %>
+      </div>
+    </div>
+  </div>
+</div>

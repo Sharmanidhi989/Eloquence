@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <% @articles.each do |article| %>
+      <div class="card" style="width: 25rem;overflow-y: hidden;height: 500px">
+        <%=image_tag article.image.url , class: "card-img-top" , style: 'height:15rem'%>
+        <div class="p-2">
+          <%= link_to "Read more.." , article_path(article) , class: "float-right" %>
+          <h1 class="card-title "><%= article.title %></h1>
+          <p><%= article.created_at.strftime("%Y-%m-%d") %></p>
+        </div>
+        <div class="card-body">
+          <%= article.description.html_safe %>
+        </div>      
+      </div>
+    <% end %>    
+  </div>
+</div>

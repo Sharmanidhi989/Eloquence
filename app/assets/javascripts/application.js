@@ -12,7 +12,8 @@
 //
 //= require jquery3
 //= require jquery_ujs
+//= require popper
+//= require bootstrap
 //= require ckeditor/init
 //= require activestorage
-//= require turbolinks
 //= require_tree .
