@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Editing Article</h1>
 <% if user_signed_in? %>
 <%= render 'form', article: @article %>
@@ -7,3 +8,4 @@
 <% else %>
   <p>You must be logged in first.</p>
 <% end %>
+</div>
