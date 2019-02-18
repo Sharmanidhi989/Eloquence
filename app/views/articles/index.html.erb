@@ -1,4 +1,11 @@
 <div class="container">
+ <%= search_form_for @search do |f| %>
+  <div class="form-group col-md-12 row">
+    <%= f.text_field :title_cont, class: "form-control col-md-8" %>
+    <%= f.submit "Search" ,class: "btn btn-outline-primary ml-2" %>
+  </div>
+<% end %>
+
   <p id="notice"><%= notice %></p>
 <%= link_to 'New Article', new_article_path , class: "btn btn-outline-primary float-right" %>
 <h1>Articles</h1>
