@@ -10,7 +10,9 @@ RailsAdmin.config do |config|
   config.model Article do
     edit do
       # For RailsAdmin >= 0.5.0
+      field :title
       field :description, :ck_editor
+      field :image
       # For RailsAdmin < 0.5.0
       # field :description do
       #   ckeditor true
