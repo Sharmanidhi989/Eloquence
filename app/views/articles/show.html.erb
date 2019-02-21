@@ -12,7 +12,7 @@
   </div>
   <div class="pdf_link mt-3">
     <div class="col-md-6">
-      <h2><%= @article.comments.count %> Comments</h2>
+      <h2>Comments <span class="badge"><%= @article.comments.count %> </span> </h2>
     <%= render @article.comments %>
     <% if user_signed_in? %>
       <%= render 'comments/form' %>
