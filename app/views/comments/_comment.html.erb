@@ -1,25 +1,11 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="card shadow rounded p-3 col-md-9">
-      <div class="card-body">
-        <h2>Comments</h2>
-        <% @article.comments.each do |comment| %>
-        <div>
-          <strong>Commenter:</strong>
-          <%= comment.commenter %>
-        </div>
-
-        <div>
-          <strong>Comment:</strong>
-          <%= comment.body %>
-        </div>
-        <% end %> 
-        <div>
-          <%= link_to 'Destroy Comment', [comment.article, comment],
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %>
-        </div>
-      </div>
-    </div>
-  </div>  
-</div>
+<% @article.comments.each do |comment| %>
+  <div>
+    <strong>User:</strong>
+    <%= comment.user.email %>
+  </div>
+  <div>
+    <strong>Comment:</strong>
+    <%= comment.comment %>
+  </div>
+<% end %> 
+<div>

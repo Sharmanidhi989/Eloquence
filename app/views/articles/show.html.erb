@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="card shadow rounded p-3 col-md-9">
+    <div class="card shadow rounded p-3">
       <p id="notice"><%= notice %></p>
       <h1 class="text-center"><%= @article.title %></h1>
       <%=image_tag @article.image.url, class: "card-img-top" %>
@@ -10,10 +10,17 @@
       </div>
     </div>
   </div>
+  <div class="pdf_link mt-3">
+    <div class="col-md-6">
+      <h2>Comments:- </h2>
+    <%= render @article.comments %>
+    <% if user_signed_in? %>
+      <%= render 'comments/form' %>
+    <% else %>
+      <p>You must login to comment..</p>
+    <% end %>
+    </div>
+  </div>
 </div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<%= render 'comments/form' %>
 
