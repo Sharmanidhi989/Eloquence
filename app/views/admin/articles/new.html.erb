@@ -1,9 +1,0 @@
-<div class="container">
-  <h1>New Article</h1>
-  <% if user_signed_in? %>
-    <%= render 'form', article: @article %>
-    <%= link_to 'Back', root_path , class: 'btn btn-primary float-right' %>
-  <% else %>
-    <p>You must be logged in first.</p>
-  <% end %>
-</div>
