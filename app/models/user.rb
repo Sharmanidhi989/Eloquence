@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+	mount_uploader :profilepic, ProfilepicUploader
+
 	validates :username, presence: :true, uniqueness: { case_sensitive: false }
 	validate :validate_username
   # Include default devise modules. Others available are:
