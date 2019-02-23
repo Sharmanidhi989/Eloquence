@@ -4,7 +4,9 @@
   <nav class="my-2 my-md-0 mr-md-3"> 
   </nav>
   <% if user_signed_in? %>
-  <%= link_to 'Logout' , destroy_user_session_path, method: :delete , class: "btn btn-outline-primary" %>        
+  <%= link_to 'Logout' , destroy_user_session_path, method: :delete , class: "btn btn-outline-primary" %>
+  &nbsp
+  &nbsp
   <%= image_tag(current_user.profilepic.to_s, class: 'avatar')%>
   <% else %>
   <%= link_to 'Login', new_user_session_path, class: "btn btn-outline-primary" %>
