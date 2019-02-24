@@ -1,5 +1,5 @@
  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow pdf_link">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Eloqunce</h5>
+  <h5 class="my-0 mr-md-auto font-weight-normal navbar-brand"><%= link_to('Eloqunce', root_path, class: 'navi') %> </h5>
   <%= link_to 'Home', root_path ,class: "nav-link" %>
   <nav class="my-2 my-md-0 mr-md-3"> 
   </nav>
@@ -7,7 +7,7 @@
   <%= link_to 'Logout' , destroy_user_session_path, method: :delete , class: "btn btn-outline-primary" %>
   &nbsp
   &nbsp
-  <%= image_tag(current_user.profilepic.to_s, class: 'avatar')%>
+  <%= link_to( image_tag(current_user.profilepic.to_s, class: 'avatar'), edit_user_registration_path)%>
   <% else %>
   <%= link_to 'Login', new_user_session_path, class: "btn btn-outline-primary" %>
   <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-primary ml-1" %> 
