@@ -1,18 +1,17 @@
 <div class="container">
   <div class="card p-3 " style="border-radius: 25px;">
-    <div class="chip mb-4">
-    	
-    	<% if comment.user.profilepic.present? %>
-      		<%= image_tag(comment.user.profilepic.to_s, class: 'avatar') %>
-    	<% else %>
-      		<%= image_tag('defaultuser.png', class: 'avatar') %>
-    	<% end %>
-  
-      <strong><%= comment.user.username %></strong>
-      <br>
-      <%= comment.comment%>
-    </div>
+    <div class="chip ">
+      <% if comment.user.profilepic.present? %>
+        <%= image_tag(comment.user.profilepic.to_s, class: 'avatar') %>
+      <% else %>
+      <%= image_tag('defaultuser.png', class: 'avatar') %>
+      <% end %>
+    <%= comment.user.username %>
   </div>
+  <div class="card-body">
+    <%= comment.comment %>
+  </div>
+</div>
 
-  <hr>
+<hr>
 </div>
