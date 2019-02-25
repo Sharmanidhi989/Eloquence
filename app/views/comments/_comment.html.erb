@@ -1,8 +1,12 @@
 <div class="container">
-	<div class="chip mb-4">
-	<%= image_tag(comment.user.profilepic.to_s, class: 'avatar') %>
-	<strong><%= comment.user.username %></strong>
-	<%= comment.comment%>
-</div>
+  <div class="card p-3 " style="border-radius: 25px;">
+    <div class="chip mb-4">
+      <%= image_tag(comment.user.profilepic.to_s, class: 'avatar') %>
+      <strong><%= comment.user.username %></strong>
+      <br>
+      <%= comment.comment%>
+    </div>
+  </div>
 
+  <hr>
 </div>
