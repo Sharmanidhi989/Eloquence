@@ -1,11 +1,8 @@
-<% @article.comments.each do |comment| %>
-  <div>
-    <strong>User:</strong>
-    <%= comment.user.username %>
-  </div>
-  <div>
-    <strong>Comment:</strong>
-    <%= comment.comment %>
-  </div>
-<% end %> 
-<div>
+<div class="container">
+	<div class="chip mb-4">
+	<%= image_tag(comment.user.profilepic.to_s, class: 'avatar') %>
+	<strong><%= comment.user.username %></strong>
+	<%= comment.comment%>
+</div>
+
+</div>
