@@ -55,3 +55,7 @@
   width: 50px;
   border-radius: 50%;
 }
+.card > img
+{
+  object-fit: cover;
+}
