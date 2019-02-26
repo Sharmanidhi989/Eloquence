@@ -1,20 +1,17 @@
 <div class="container">
-  <div class="row">
-  <div class="card-group">
+  <div class="card-columns">
     <% @articles.each do |article| %>
-    <div class="card" style="overflow: hidden;max-height: 500px">
-      
+    <div class="card" style="overflow: hidden;height: 500px">
       <% if article.image.present? %>
         <%=image_tag article.image.url , class: "card-img-top" , style: 'height:15rem'%>
         <% else %>
         <%=image_tag 'default_background.jpg' , class: "card-img-top" , style: 'height:15rem'%>
       <% end %>
-      <div class="p-2" style="overflow: hidden;height: 200px">
-        
+      <div class="p-2" style="overflow: hidden;height: 175px;">
         <h5 class="card-title" ><%= article.title %></h5>
       </div>
         <p><%= article.created_at.strftime("%Y-%m-%d") %></p>
-      <div class="card-footer float-left">
+      <div class="card-footer">
        <%= link_to "Read more.." , article_path(article) , class: "float-right" %>
       </div>      
     </div>
