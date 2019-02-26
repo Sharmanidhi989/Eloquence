@@ -4,7 +4,7 @@
       <p id="notice"><%= notice %></p>
       <h1 class="text-center"><%= @article.title %></h1>
       <% if @article.image.present? %>
-        <%=image_tag article.image.url , class: "card-img-top" , style: 'height:15rem'%>
+        <%=image_tag @article.image.url , class: "card-img-top" %>
         <% else %>
         <%=image_tag 'default_background.jpg' , class: "card-img-top" , style: 'height:auto;'%>
       <% end %>
