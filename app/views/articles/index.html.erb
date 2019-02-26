@@ -25,7 +25,14 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.description.html_safe %></td>
+        
+        <% if article.image.url.present? %>
+          
         <td><%=image_tag article.image.url ,:style =>'width:200px; height:200px' %></td>
+          <% else %>
+          <td><%=image_tag 'default_background.jpg' ,:style =>'width:200px; height:100px;' %></td>
+        <% end %>
+        
         <td><%= link_to 'Show', article, class:'btn btn-primary' %></td>
       </tr>
     <% end %>
