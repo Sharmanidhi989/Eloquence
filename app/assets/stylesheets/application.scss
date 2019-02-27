@@ -55,3 +55,9 @@
   width: 50px;
   border-radius: 50%;
 }
+
+
+.dropdown-menu.show {
+    display: block;
+    left: -100px;
+}
