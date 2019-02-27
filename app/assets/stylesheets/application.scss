@@ -61,3 +61,9 @@
     display: block;
     left: -100px;
 }
+
+
+.card > img
+{
+  object-fit: cover;
+}
