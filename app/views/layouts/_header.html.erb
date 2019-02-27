@@ -1,34 +1,30 @@
-<nav class="navbar navbar-expand-xl navbar-light bg-light pmd-navbar pmd-z-depth fixed-top">
-  <%= link_to('Eloqunce', root_path, class: 'navi navbar-brand') %>
+<nav class="navbar p-0 navbar-expand-xl gradient-45deg-purple-light-blue text-white pmd-navbar pmd-z-depth fixed-top">
+  
+    <%= link_to( image_tag('http://eloquencesa.co.za/wp-content/uploads/2018/07/Eloquence_PNG_Logo-Copy.png', style:'width:100px;'), root_path) %>
+ 
   <!-- <a class="" href="#">Navbar</a> -->
   <div class="dropdown pmd-dropdown pmd-user-info ml-auto">
     <a href="javascript:void(0);" class="btn-user  media align-items-center" data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
-
-      <% if user_signed_in? %>  
-      <% if current_user.profilepic?%>
-      <%= image_tag(current_user.profilepic.to_s, class: 'avatar dropdown') %>
+      <% if user_signed_in? %>
+        <% if current_user.profilepic?%>
+          <%= image_tag(current_user.profilepic.to_s, class: 'avatar dropdown') %>
+        <% else %>
+          <%= image_tag('defaultuser.png', class: 'avatar dropdown')%>
+        <% end %>
       <% else %>
-      <%= image_tag('defaultuser.png', class: 'avatar dropdown')%>
-      <% end %>
-      <% else %>
-      <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
+        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
       aria-expanded="false">
-      <button type="button" class="btn btn-outline-dark">Menu</button>
-    <% end %>
-      
-
-  </a>
-
-  <ul class="dropdown-menu dropdown-menu-right" role="menu">
-
-    <% if user_signed_in? %>
-    <%= link_to('Settings', edit_user_registration_path, class: "dropdown-item")%>
-    <%= link_to 'Logout' , destroy_user_session_path, method: :delete , class: "dropdown-item" %>
-    <% else %>
-    <%= link_to 'Login', new_user_session_path, class: "dropdown-item" %>
-    <%= link_to 'Sign Up', new_user_registration_path, class: "dropdown-item"%>  
-    <% end %>
-  </ul>
-
-</div>
-</nav>
+          <button type="button" class="btn btn-outline-dark">Menu</button>
+        <% end %>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <% if user_signed_in? %>
+          <%= link_to('Settings', edit_user_registration_path, class: "dropdown-item")%>
+          <%= link_to 'Logout' , destroy_user_session_path, method: :delete , class: "dropdown-item" %>
+        <% else %>
+          <%= link_to 'Login', new_user_session_path, class: "dropdown-item" %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: "dropdown-item"%>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
