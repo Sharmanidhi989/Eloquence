@@ -62,7 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-
 gem 'ckeditor'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
