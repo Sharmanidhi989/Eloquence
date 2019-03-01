@@ -2,7 +2,11 @@
   <div class="row justify-content-center">
     <div class="card col-md-4 shadow rounded p-3">
       <div class="profile-edit-row pb-4">
-        <%= image_tag(@current_user.profilepic.to_s, class: "editavatar")%>
+        <% if current_user.profilepic?%>
+          <%= image_tag(@current_user.profilepic.to_s, class: "editavatar")%>
+        <% else %>
+          <%= image_tag('defaultuser.png', class: 'editavatar')%>
+        <% end %>
       </div>
       <hr>
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
