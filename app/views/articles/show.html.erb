@@ -23,7 +23,7 @@
         <p>You must login to comment..</p>
       <% end %>
       <hr class="mb-5">
-      <%= render @article.comments.includes(:user) %>
+      <%= render @article.comments.includes(:user).order("created_at DESC") %>
     </div>
   </div>
 </div>
