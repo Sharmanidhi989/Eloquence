@@ -17,12 +17,13 @@
   <div class="pdf_link mt-3">
     <div class="col-md-6">
       <h2>Comments <span class="badge"><%= @article.comments.count %> </span></h2>
-      <%= render @article.comments.includes(:user) %>
       <% if user_signed_in? %>
         <%= render 'comments/form' %>
       <% else %>
         <p>You must login to comment..</p>
       <% end %>
+      <hr class="mb-5">
+      <%= render @article.comments.includes(:user) %>
     </div>
   </div>
 </div>
