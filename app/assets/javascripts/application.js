@@ -17,6 +17,7 @@
 //= require ckeditor/init
 //= require activestorage
 //= require_tree .
+
 function readURL(input) {
 	if (input.files && input.files[0]) {
 		var reader = new FileReader();
@@ -28,3 +29,4 @@ function readURL(input) {
 		reader.readAsDataURL(input.files[0]);
 	}
 }
+	

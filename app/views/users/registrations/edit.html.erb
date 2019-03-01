@@ -6,7 +6,7 @@
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       
-      <div class="profile-edit-row pb-4">
+      <div class="profile-edit-row">
         <% if current_user.profilepic?%>
           <%= image_tag(@current_user.profilepic.to_s, class: "editavatar", id: "preview")%>
         <% else %>
