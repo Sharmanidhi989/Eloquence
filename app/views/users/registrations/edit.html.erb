@@ -10,14 +10,13 @@
         <% if current_user.profilepic?%>
           <%= image_tag(@current_user.profilepic.to_s, class: "editavatar", id: "preview")%>
         <% else %>
-          <%= image_tag('defaultuser.png', class: 'editavatar')%>
+          <%= image_tag('defaultuser.png', class: 'editavatar', id: "preview")%>
         <% end %>
       </div>
 
       <div class="form-group">
         <%= f.label :Avatar %> <br />
         <%= f.file_field :profilepic, class: 'form-control',onchange: "readURL(this);"%>
-         
       </div>
       <hr>
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
