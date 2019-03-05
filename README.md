@@ -14,7 +14,10 @@ Things you may want to cover:
 
 * Database initialization : basically using sqlite3 along with gem sqlite3 version 1.3.11
 
-* It looks something like this
+## It looks something like this
 
 ![alt text](https://github.com/Sharmanidhi989/basic-image-upload/blob/master/screenshot/1.jpg)
+
+## and like this
+
 ![alt text](https://github.com/Sharmanidhi989/basic-image-upload/blob/master/screenshot/2.jpg)
