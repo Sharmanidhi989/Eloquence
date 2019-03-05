@@ -16,8 +16,5 @@ Things you may want to cover:
 
 * It looks something like this
 
-![alt text](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/1.jpg)
-![alt text](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/2.jpg)
-![alt text](https://raw.githubusercontent.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/2.jpg)
-## This is the result I've got while studying Decision Trees
-![alt text](https://github.com/nkroker/machinelearningbeginner/blob/master/iris-1.jpg)
+![alt text](https://github.com/Sharmanidhi989/basic-image-upload/blob/master/screenshot/1.jpg)
+![alt text](https://github.com/Sharmanidhi989/basic-image-upload/blob/master/screenshot/2.jpg)
