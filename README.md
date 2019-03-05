@@ -16,5 +16,5 @@ Things you may want to cover:
 
 * It looks something like this
 
-![Image not found](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/1.png)
-![Image not found](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/2.png)
+![alt text](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/1.jpg)
+![alt text](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/2.jpg)
