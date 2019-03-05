@@ -18,3 +18,4 @@ Things you may want to cover:
 
 ![alt text](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/1.jpg)
 ![alt text](https://github.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/2.jpg)
+![alt text](https://raw.githubusercontent.com/Sharmanidhi989/basic-image-upload/tree/master/screenshot/2.jpg)
