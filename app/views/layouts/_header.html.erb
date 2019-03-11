@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light pmd-navbar pmd-z-depth fixed-top">
   <%= link_to('Eloquence', root_path, class: 'navi navbar-brand') %>
   <!-- <a class="" href="#">Navbar</a> -->
+  <% if (request.path_info).include?('admin')%>
+        
+  <% else %>
   <div class="dropdown pmd-dropdown pmd-user-info ml-auto">
     <a href="javascript:void(0);" class="btn-user  media align-items-center" data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
       <% if user_signed_in? %>  
@@ -25,4 +28,5 @@
       <% end %>
     </ul>
   </div>
+  <% end %>
 </nav>
